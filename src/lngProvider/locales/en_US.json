@@ -566,11 +566,13 @@
   "component.tokenization.label.geoFocus":"Geographic Focus",
   "component.tokenization.label.countryFocus1":"Country Focus 1",
   "component.tokenization.label.countryFocus2":"Country Focus 2",
-  "component.tokenization.label.projectCategory":"Project Category"
-
-
-
-
+  "component.tokenization.label.projectCategory":"Project Category",
+  "component.tokenization.label.currency":"Currency",
+  "component.tokenization.label.measurement":"Measurement",
+  "component.tokenization.label.startDate":"Start Date",
+  "component.tokenization.label.endDate":"End Date",
+  "component.tokenization.label.standard":"Standard",
+  "component.tokenization.label.verifier":"Verifier"
 
 
 

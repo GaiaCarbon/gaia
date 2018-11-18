@@ -18,8 +18,8 @@ import PersonalInformation from './steps/projectInformation';
 import FundraisingDetails from './steps/fundraisingDetails';
 import AdditionalDocuments from './steps/additionalDocuments';
 import LegalParties from './steps/legalParties';
-import Confirmation from './steps/confirmation'
-
+import Confirmation from './steps/confirmation';
+import DatePickers from '../../../components/routes/pickers/date/DatePickers';
 
 class TokenizationFlow extends React.Component {
     state = {

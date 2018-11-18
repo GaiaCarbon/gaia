@@ -13,27 +13,46 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
+import SvgIcon from '@material-ui/core/SvgIcon';
+
+const iconStyles = {
+    height: "75",
+    width: "75",
+    color: "#3f51b5"
+};
 
 class Confirmation extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="mb-5">
                 <div className="row">
-                    <div className="card-heading col-md-12"><h2>Completed</h2></div>
+                    <div className="col-md-12 text-center">
+                        <div className="form-group">
+                            <SvgIcon style={iconStyles}>
+                                <path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-2 17l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L19 8l-9 9z"></path>
+                            </SvgIcon>
+                            <h1>Completed</h1>
+                            <p>Your project application has been submitted to the greenX platform.</p>
+                            <p>Out experts will asses and get back to you.</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="form-group">
-                            <TextField
-                                id="aboutUser"
-                                label="Write Something About You"
-                                margin="normal"
-                                multiline
-                                rowsMax="4"
-                                fullWidth
-                            /></div>
+                        <h2>Summary of the project</h2>
+                        <hr />
+                        <div className="row">
+                            <div className="col-md-4">Part 1</div>
+                            <div className="col-md-4">Part 2</div>
+                            <div className="col-md-4">Part 3</div>
+                        </div>
+
+
+
+
                     </div>
+
                 </div>
             </div>
         );

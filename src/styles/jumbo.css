@@ -27179,6 +27179,11 @@ body.dark-theme {
   display: table;
 }
 
+.completeIcon {
+  width: 200px;
+  height: 200px;
+}
+
 .nudge {
   padding-top: 3px;
 }
