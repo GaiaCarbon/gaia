@@ -7,6 +7,7 @@
     "@material-ui/icons": "^1.1.0",
     "autoprefixer": "^8.6.5",
     "autosuggest-highlight": "^3.1.1",
+	"autobind-decorator": "~2.1",
     "bootstrap": "^4.1.2",
     "bootstrap-v4-rtl": "^4.1.1-0",
     "cross-env": "^5.2.0",
@@ -60,6 +61,9 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.16.0",
     "sass": "^1.9.2"
+  },
+  "resolutions": {
+    "autobind-decorator": "~2.1"
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",
