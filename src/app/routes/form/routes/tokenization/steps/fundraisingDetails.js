@@ -14,34 +14,49 @@ import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 import moment from 'moment';
-import MomentUtils from 'material-ui-pickers/utils/moment-utils';
-import {DatePicker} from 'material-ui-pickers';
-import MuiPickersUtilsProvider from "material-ui-pickers/MuiPickersUtilsProvider";
+import {DatePicker, DateTimePicker} from 'material-ui-pickers';
 
 class FundraisingDetails extends React.Component {
 
-    state = {
-        units : "",
-        currency : "",
-        measurement : "",
-        startDate: moment(),
-        endDate: moment(),
-        selectedDate: moment()
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            units : "",
+            currency : "",
+            measurement : "",
+            startDate:  moment(),
+            endDate: moment()
+        };
+    }
 
     handleChange = name => event => {
         this.setState({[name]: event.target.value});
     };
 
-    handleDateChange = (date) => {
-        this.setState({selectedDate: date});
+    handleDateChange = name => date => {
+
+        debugger;
+
+
+        this.setState({[name]: date});
+
+        let test = moment();
+
+
     };
 
     render(){
-        const {selectedDate} = this.state;
+        const {startDate} = this.state;
+        const {endDate} = this.state;
+
 
         return (
             <div>
+                <div className="row">
+                    <div className="col-md-12">
+
+                    </div>
+                </div>
                 <div className="row">
                     <div className="card-heading col-md-12"><h2>Fundraising Details</h2></div>
                 </div>
@@ -99,14 +114,29 @@ class FundraisingDetails extends React.Component {
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <InputLabel htmlFor="startDate">{<IntlMessages id="component.tokenization.label.startDate"/>}</InputLabel>
-
-
+                                    <DatePicker
+                                        fullWidth
+                                        value={startDate}
+                                        onChange={this.handleDateChange('startDate')}
+                                        animateYearScrolling={false}
+                                        leftArrowIcon={<i className="zmdi zmdi-arrow-back" />}
+                                        rightArrowIcon={<i className="zmdi zmdi-arrow-forward" />}
+                                    />
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="form-group">
-                                    <InputLabel htmlFor="endDate">{<IntlMessages id="component.tokenization.label.endDate"/>}</InputLabel>
-
+                                    <div className="form-group">
+                                        <InputLabel htmlFor="endDate">{<IntlMessages id="component.tokenization.label.startDate"/>}</InputLabel>
+                                        <DatePicker
+                                            fullWidth
+                                            value={endDate}
+                                            onChange={this.handleDateChange('endDate')}
+                                            animateYearScrolling={false}
+                                            leftArrowIcon={<i className="zmdi zmdi-arrow-back" />}
+                                            rightArrowIcon={<i className="zmdi zmdi-arrow-forward" />}
+                                        />
+                                    </div>
 
                                 </div>
                             </div>
