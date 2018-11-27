@@ -14,24 +14,39 @@ import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 
-class PersonalInformation extends React.Component {
+class ProjectInformation extends React.Component {
 
-    state = {
-        projectType: "",
-        assertType: "",
-        geoFocus: "",
-        countryFocus1: "",
-        countryFocus2: "",
-        projectCategory: "",
-        accepted: [],
-        rejected: []
+    constructor(props) {
+        super(props);
+        this.projectInfo = {};
+        this.state = {
+            projectType: "",
+            aType: "",
+            geoFocus: "",
+            countryFocus1: "",
+            countryFocus2: "",
+            projectCategory: "",
+            accepted: [],
+            rejected: []
+        };
+        this.handleChange = this.handleChange.bind(this);
     };
 
-    handleChange = name => event => {
-        this.setState({[name]: event.target.value});
+    handleChange(e) {
+        debugger;
+        if (e.target) {
+
+            let targetControl = e.target.name;
+            let value = e.target.value;
+            // Send state to upper control
+            this.props.onStateChange(targetControl, value);
+            // maintain state in control (visual issue with the material ui)
+            this.setState({[targetControl]: value});
+        }
     };
 
     render() {
+
         return (
             <div>
                 <div className="row">
@@ -47,8 +62,9 @@ class PersonalInformation extends React.Component {
 
                                         <InputLabel htmlFor="projectType">{<IntlMessages id="component.tokenization.label.projectType"/>}</InputLabel>
                                         <Select
+                                            name="projectType"
                                             value={this.state.projectType}
-                                            onChange={this.handleChange('projectType')}
+                                            onChange={this.handleChange}
                                             input={<Input id="projectType"/>}
                                         >
                                             <MenuItem value={10}>Existing Project</MenuItem>
@@ -57,14 +73,17 @@ class PersonalInformation extends React.Component {
                                     </FormControl>
                                 </div>
                             </div>
+
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <FormControl className="w-100"  margin="normal">
-                                        <InputLabel htmlFor="assertType">{<IntlMessages id="component.tokenization.label.assetType"/>}</InputLabel>
+
+                                        <InputLabel htmlFor="aType">{<IntlMessages id="component.tokenization.label.assetType"/>}</InputLabel>
                                         <Select
-                                            value={this.state.assertType}
-                                            onChange={this.handleChange('assertType')}
-                                            input={<Input id="assertType"/>}
+                                            name="aType"
+                                            value={this.state.aType}
+                                            onChange={this.handleChange}
+                                            input={<Input id="aType"/>}
                                         >
                                             <MenuItem value={10}>Water</MenuItem>
                                             <MenuItem value={20}>Solar</MenuItem>
@@ -72,7 +91,6 @@ class PersonalInformation extends React.Component {
                                             <MenuItem value={40}>Wind</MenuItem>
                                             <MenuItem value={50}>Biogas</MenuItem>
                                             <MenuItem value={60}>Energy Efficiency</MenuItem>
-
                                         </Select>
                                     </FormControl>
                                 </div>
@@ -83,7 +101,9 @@ class PersonalInformation extends React.Component {
                                 <div className="form-group">
                                     <TextField
                                         id="assetName"
+                                        name="assetName"
                                         margin="normal"
+                                        onChange={this.handleChange}
                                         label={<IntlMessages id="component.tokenization.label.assetName"/>}
                                         fullWidth
                                     />
@@ -96,8 +116,9 @@ class PersonalInformation extends React.Component {
                                     <FormControl className="w-100"  margin="normal">
                                         <InputLabel htmlFor="geoFocus">{<IntlMessages id="component.tokenization.label.geoFocus"/>}</InputLabel>
                                         <Select
+                                            name="geoFocus"
                                             value={this.state.geoFocus}
-                                            onChange={this.handleChange('geoFocus')}
+                                            onChange={this.handleChange}
                                             input={<Input id="geoFocus"/>}
                                         >
                                             <MenuItem value={10}>Europe</MenuItem>
@@ -115,8 +136,9 @@ class PersonalInformation extends React.Component {
                                     <FormControl className="w-100"  margin="normal">
                                         <InputLabel htmlFor="countryFocus1">{<IntlMessages id="component.tokenization.label.countryFocus1"/>}</InputLabel>
                                         <Select
+                                            name="countryFocus1"
                                             value={this.state.countryFocus1}
-                                            onChange={this.handleChange('countryFocus1')}
+                                            onChange={this.handleChange}
                                             input={<Input id="countryFocus1"/>}
                                         >
                                             <MenuItem value="">
@@ -135,8 +157,10 @@ class PersonalInformation extends React.Component {
                                 <div className="form-group">
                                     <FormControl className="w-100"  margin="normal">
                                         <InputLabel htmlFor="projectCategory">{<IntlMessages id="component.tokenization.label.projectCategory"/>}</InputLabel>
-                                        <Select value={this.state.projectCategory}
-                                            onChange={this.handleChange('projectCategory')}
+                                        <Select
+                                            name="projectCategory"
+                                            value={this.state.projectCategory}
+                                            onChange={this.handleChange}
                                             input={<Input id="projectCategory"/>}
                                         >
                                             <MenuItem value="">
@@ -164,6 +188,8 @@ class PersonalInformation extends React.Component {
                             <div className="col-md-12 p-2 ">
                                 <div className="form-group nudge">
                                     <TextField
+                                        name="aboutProject"
+                                        onChange={this.handleChange}
                                         rows="5"
                                         label="About"
                                         placeholder="Describe your project here"
@@ -176,7 +202,8 @@ class PersonalInformation extends React.Component {
                             <div className="col-md-12">
                                 <div className="form-group">
                                     <TextField
-
+                                        name="projectHighLights"
+                                        onChange={this.handleChange}
                                         rows="5"
                                         label="Highlights"
                                         placeholder="Project Highlights"
@@ -223,4 +250,4 @@ class PersonalInformation extends React.Component {
     }
 }
 
-export default PersonalInformation;
+export default ProjectInformation;

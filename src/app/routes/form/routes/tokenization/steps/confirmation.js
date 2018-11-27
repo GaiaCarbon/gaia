@@ -43,7 +43,7 @@ class Confirmation extends React.Component {
                         <h2>Summary of the project</h2>
                         <hr />
                         <div className="row">
-                            <div className="col-md-4">Part 1</div>
+                            <div className="col-md-4">AssetName : {this.props.assetName}</div>
                             <div className="col-md-4">Part 2</div>
                             <div className="col-md-4">Part 3</div>
                         </div>

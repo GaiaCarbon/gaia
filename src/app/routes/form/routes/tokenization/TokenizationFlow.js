@@ -14,34 +14,34 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
-import PersonalInformation from './steps/projectInformation';
+import ProjectInformation from './steps/projectInformation';
 import FundraisingDetails from './steps/fundraisingDetails';
 import AdditionalDocuments from './steps/additionalDocuments';
 import LegalParties from './steps/legalParties';
 import Confirmation from './steps/confirmation';
 import DatePickers from '../../../components/routes/pickers/date/DatePickers';
+import moment from "moment";
 
 class TokenizationFlow extends React.Component {
-    state = {
-        activeStep: 0,
-        projectType: "",
-        assertType: "",
-        geoFocus: "",
-        countryFocus1: "",
-        countryFocus2: "",
-        projectCategory: "",
-        accepted: [],
-        rejected: []
-    };
 
-    handleChange = name => event => {
-        this.setState({[name]: event.target.value});
-    };
+    constructor(props) {
+        super(props);
+        this.projectInfo = {};
+        this.state = {
+            activeStep: 0,
+            assetName:""
+        };
+
+        this.handleStateChange = this.handleStateChange.bind(this);
+    }
 
     handleNext = () => {
+
+        let pStat = this.projectInfo;
+        debugger;
         const {activeStep} = this.state;
         this.setState({
-            activeStep: activeStep + 1,
+            activeStep: activeStep + 1
         });
     };
 
@@ -58,6 +58,19 @@ class TokenizationFlow extends React.Component {
         });
     };
 
+    handleStateChange(name,value) {
+
+        this.setState({[name]: value});
+
+        if(name === "projectType"){
+
+            let sdfsd = this.state;
+            debugger;
+
+        }
+
+    };
+
 
     getSteps() {
         return ['', '', '', ''];
@@ -67,7 +80,10 @@ class TokenizationFlow extends React.Component {
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
-                return <PersonalInformation />;
+                return <ProjectInformation onStateChange={this.handleStateChange}
+                                           // projectType={this.state.projectType}
+                                           // assetType={this.state.assetType}
+                />;
             case 1:
                 return <FundraisingDetails />;
             case 2:
@@ -101,7 +117,9 @@ class TokenizationFlow extends React.Component {
                 <div>
                     {this.state.activeStep === steps.length ? (
                         <div>
-                            <Confirmation />
+                            <Confirmation
+                                assetName={this.state.assetName}
+                            />
                             <div>
                                 <Button onClick={this.handleReset}>Reset</Button>
                             </div>
