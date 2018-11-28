@@ -93,9 +93,9 @@ class FundraisingDetails extends React.Component {
                                             onChange={this.handleChange}
                                             input={<Input id="currency"/>}
                                         >
-                                            <MenuItem value={10}>EUR</MenuItem>
-                                            <MenuItem value={20}>USD</MenuItem>
-                                            <MenuItem value={30}>CHF</MenuItem>
+                                            <MenuItem value="EUR">EUR</MenuItem>
+                                            <MenuItem value="USD">USD</MenuItem>
+                                            <MenuItem value="CHF">CHF</MenuItem>
                                         </Select>
                                     </FormControl>
                                 </div>
@@ -112,8 +112,8 @@ class FundraisingDetails extends React.Component {
                                             onChange={this.handleChange}
                                             input={<Input id="measurement"/>}
                                         >
-                                            <MenuItem value={10}>VER (tCO2e)</MenuItem>
-                                            <MenuItem value={20}>VCU (tCO2e)</MenuItem>
+                                            <MenuItem value="VER (tCO2e)">VER (tCO2e)</MenuItem>
+                                            <MenuItem value="VCU (tCO2e)">VCU (tCO2e)</MenuItem>
                                         </Select>
                                     </FormControl>
                                 </div>

@@ -82,38 +82,38 @@ class SidenavContent extends Component {
 
                     {/*<li className="nav-header"><IntlMessages id="sidebar.main"/></li>*/}
 
-                  <li className="menu collapse-box">
-                        <Button href="javascript:void(0)">
-                            <i className="zmdi zmdi-view-dashboard zmdi-hc-fw"/>
-                            <span className="nav-text">
-                            <IntlMessages id="sidebar.dashboard"/>
-                        </span>
-                        </Button>
-                        <ul className="sub-menu">
-                            <li>
-                                <NavLink className="prepend-icon" to="/app/dashboard/default">
-                                    <span className="nav-text"><IntlMessages id="sidebar.dashboard.default"/></span>
-                                </NavLink>
-                            </li>
-                            {/*<li>*/}
-                                {/*<NavLink className="prepend-icon"*/}
-                                         {/*to="/app/dashboard/eCommerce">*/}
-                                {/*<span className="nav-text text-transform-none"><IntlMessages*/}
-                                    {/*id="sidebar.dashboard.ecommerce"/></span>*/}
-                                {/*</NavLink>*/}
-                            {/*</li>*/}
-                            {/*<li>*/}
-                                {/*<NavLink className="prepend-icon" to="/app/dashboard/news">*/}
-                                    {/*<span className="nav-text"><IntlMessages id="sidebar.dashboard.news"/></span>*/}
-                                {/*</NavLink>*/}
-                            {/*</li>*/}
-                            {/*<li>*/}
-                                {/*<NavLink className="prepend-icon" to="/app/dashboard/intranet">*/}
-                                    {/*<span className="nav-text"><IntlMessages id="sidebar.dashboard.intranet"/></span>*/}
-                                {/*</NavLink>*/}
-                            {/*</li>*/}
-                        </ul>
-                    </li>
+                  {/*<li className="menu collapse-box">*/}
+                        {/*<Button href="javascript:void(0)">*/}
+                            {/*<i className="zmdi zmdi-view-dashboard zmdi-hc-fw"/>*/}
+                            {/*<span className="nav-text">*/}
+                            {/*<IntlMessages id="sidebar.dashboard"/>*/}
+                        {/*</span>*/}
+                        {/*</Button>*/}
+                        {/*<ul className="sub-menu">*/}
+                            {/*/!*<li>*!/*/}
+                                {/*/!*<NavLink className="prepend-icon" to="/app/dashboard/default">*!/*/}
+                                    {/*/!*<span className="nav-text"><IntlMessages id="sidebar.dashboard.default"/></span>*!/*/}
+                                {/*/!*</NavLink>*!/*/}
+                            {/*/!*</li>*!/*/}
+                            {/*/!*<li>*!/*/}
+                                {/*/!*<NavLink className="prepend-icon"*!/*/}
+                                         {/*/!*to="/app/dashboard/eCommerce">*!/*/}
+                                {/*/!*<span className="nav-text text-transform-none"><IntlMessages*!/*/}
+                                    {/*/!*id="sidebar.dashboard.ecommerce"/></span>*!/*/}
+                                {/*/!*</NavLink>*!/*/}
+                            {/*/!*</li>*!/*/}
+                            {/*/!*<li>*!/*/}
+                                {/*/!*<NavLink className="prepend-icon" to="/app/dashboard/news">*!/*/}
+                                    {/*/!*<span className="nav-text"><IntlMessages id="sidebar.dashboard.news"/></span>*!/*/}
+                                {/*/!*</NavLink>*!/*/}
+                            {/*/!*</li>*!/*/}
+                            {/*/!*<li>*!/*/}
+                                {/*/!*<NavLink className="prepend-icon" to="/app/dashboard/intranet">*!/*/}
+                                    {/*/!*<span className="nav-text"><IntlMessages id="sidebar.dashboard.intranet"/></span>*!/*/}
+                                {/*/!*</NavLink>*!/*/}
+                            {/*/!*</li>*!/*/}
+                        {/*</ul>*/}
+                    {/*</li>*/}
 
                     {/*<li className="ui_tooltip menu">*/}
                         {/*<Button className="void" href="javascript:void(0)">*/}
@@ -408,7 +408,7 @@ class SidenavContent extends Component {
                         {/*</ul>*/}
                     {/*</li>*/}
 
-                    <li className="nav-header"><IntlMessages id="sidebar.form"/></li>
+                    {/*<li className="nav-header"><IntlMessages id="sidebar.form"/></li>*/}
 
                     <li className="menu">
                         <Button href="javascript:void(0)">

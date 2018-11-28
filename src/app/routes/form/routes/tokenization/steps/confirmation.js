@@ -14,6 +14,13 @@ import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 import SvgIcon from '@material-ui/core/SvgIcon';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import {Card, CardBody, CardImg, CardSubtitle, CardText} from 'reactstrap';
+import moment from "moment";
 
 const iconStyles = {
     height: "75",
@@ -22,6 +29,13 @@ const iconStyles = {
 };
 
 class Confirmation extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+        };
+    }
+
 
     render() {
         return (
@@ -43,9 +57,117 @@ class Confirmation extends React.Component {
                         <h2>Summary of the project</h2>
                         <hr />
                         <div className="row">
-                            <div className="col-md-4">AssetName : {this.props.assetName}</div>
-                            <div className="col-md-4">Part 2</div>
-                            <div className="col-md-4">Part 3</div>
+                            <div className="col-md-4">
+                                <Card className="shadow border-0">
+                                    <CardBody>
+                                        <h3 className="card-title">Project Information</h3>
+                                        <CardText>
+                                            <div className="table-responsive-material">
+                                                <Table>
+                                                    <TableBody>
+                                                        <TableRow>
+                                                            <TableCell color="lightgray">Project Type</TableCell>
+                                                            <TableCell>{this.props.projectType}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Type of asset</TableCell>
+                                                            <TableCell>{this.props.aType}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Geographic Focus</TableCell>
+                                                            <TableCell>{this.props.geoFocus}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Focus Country</TableCell>
+                                                            <TableCell>{this.props.countryFocus1}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Project Category</TableCell>
+                                                            <TableCell>{this.props.projectCategory}</TableCell>
+                                                        </TableRow>
+                                                    </TableBody>
+                                                </Table>
+                                            </div>
+                                        </CardText>
+                                    </CardBody>
+                                </Card>
+                                <Card className="shadow border-0">
+                                    <CardBody>
+                                        <h3 className="card-title">About</h3>
+                                        <CardText>{this.props.aboutProject}</CardText>
+                                    </CardBody>
+                                </Card>
+                            </div>
+                            <div className="col-md-4">
+                                <Card className="shadow border-0">
+                                    <CardBody>
+                                        <h3 className="card-title">Fundraising Details</h3>
+                                        <CardText>
+                                            <div className="table-responsive-material">
+                                                <Table>
+                                                    <TableBody>
+                                                        <TableRow>
+                                                            <TableCell>Units</TableCell>
+                                                            <TableCell>{this.props.units}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Currency</TableCell>
+                                                            <TableCell>{this.props.currency}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Measurement</TableCell>
+                                                            <TableCell>{this.props.measurement}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Project Start</TableCell>
+                                                            <TableCell>{ this.props.projectStart.format("YYYY-MM-DD")}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Project End</TableCell>
+                                                            <TableCell>{ this.props.projectEnd.format("YYYY-MM-DD")}</TableCell>
+                                                        </TableRow>
+                                                    </TableBody>
+                                                </Table>
+                                            </div>
+                                        </CardText>
+                                    </CardBody>
+                                </Card>
+                                <Card className="shadow border-0">
+                                    <CardBody>
+                                        <h3 className="card-title">Highlights</h3>
+                                        <CardText>{this.props.projectHighLights}</CardText>
+                                    </CardBody>
+                                </Card>
+                            </div>
+                            <div className="col-md-4">
+                                <Card className="shadow border-0">
+                                    <CardBody>
+                                        <h3 className="card-title">Legal Parties</h3>
+                                        <CardText>
+                                            <div className="table-responsive-material">
+                                                <Table>
+                                                    <TableBody>
+                                                        <TableRow>
+                                                            <TableCell>Standard</TableCell>
+                                                            <TableCell>{this.props.standard}</TableCell>
+                                                        </TableRow>
+                                                        <TableRow>
+                                                            <TableCell>Verifier</TableCell>
+                                                            <TableCell>{this.props.verifier}</TableCell>
+                                                        </TableRow>
+                                                    </TableBody>
+                                                </Table>
+                                            </div>
+                                        </CardText>
+                                    </CardBody>
+                                </Card>
+                                <Card className="shadow border-0">
+                                    <CardBody>
+                                        <h3 className="card-title">Documents</h3>
+                                        <CardText></CardText>
+                                    </CardBody>
+                                </Card>
+                            </div>
                         </div>
 
                     </div>

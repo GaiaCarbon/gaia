@@ -66,8 +66,8 @@ class ProjectInformation extends React.Component {
                                             onChange={this.handleChange}
                                             input={<Input id="projectType"/>}
                                         >
-                                            <MenuItem value={10}>Existing Project</MenuItem>
-                                            <MenuItem value={20}>Current Fundraising</MenuItem>
+                                            <MenuItem value="Existing Project">Existing Project</MenuItem>
+                                            <MenuItem value="Current Fundraising">Current Fundraising</MenuItem>
                                         </Select>
                                     </FormControl>
                                 </div>
@@ -84,12 +84,12 @@ class ProjectInformation extends React.Component {
                                             onChange={this.handleChange}
                                             input={<Input id="aType"/>}
                                         >
-                                            <MenuItem value={10}>Water</MenuItem>
-                                            <MenuItem value={20}>Solar</MenuItem>
-                                            <MenuItem value={30}>Biomass</MenuItem>
-                                            <MenuItem value={40}>Wind</MenuItem>
-                                            <MenuItem value={50}>Biogas</MenuItem>
-                                            <MenuItem value={60}>Energy Efficiency</MenuItem>
+                                            <MenuItem value="Water">Water</MenuItem>
+                                            <MenuItem value="Solar">Solar</MenuItem>
+                                            <MenuItem value="Biomass">Biomass</MenuItem>
+                                            <MenuItem value="Wind">Wind</MenuItem>
+                                            <MenuItem value="Biogas">Biogas</MenuItem>
+                                            <MenuItem value="Energy Efficiency">Energy Efficiency</MenuItem>
                                         </Select>
                                     </FormControl>
                                 </div>
@@ -120,11 +120,11 @@ class ProjectInformation extends React.Component {
                                             onChange={this.handleChange}
                                             input={<Input id="geoFocus"/>}
                                         >
-                                            <MenuItem value={10}>Europe</MenuItem>
-                                            <MenuItem value={20}>Asia</MenuItem>
-                                            <MenuItem value={30}>North America</MenuItem>
-                                            <MenuItem value={40}>South America</MenuItem>
-                                            <MenuItem value={50}>Africa</MenuItem>
+                                            <MenuItem value="Europe">Europe</MenuItem>
+                                            <MenuItem value="Asia">Asia</MenuItem>
+                                            <MenuItem value="North America">North America</MenuItem>
+                                            <MenuItem value="South America">South America</MenuItem>
+                                            <MenuItem value="Africa">Africa</MenuItem>
 
                                         </Select>
                                     </FormControl>
@@ -143,9 +143,9 @@ class ProjectInformation extends React.Component {
                                             <MenuItem value="">
                                                 <em>None</em>
                                             </MenuItem>
-                                            <MenuItem value={10}>Switzerland</MenuItem>
-                                            <MenuItem value={20}>Brazil</MenuItem>
-                                            <MenuItem value={30}>USA</MenuItem>
+                                            <MenuItem value="Switzerland">Switzerland</MenuItem>
+                                            <MenuItem value="Brazil">Brazil</MenuItem>
+                                            <MenuItem value="USA">USA</MenuItem>
                                         </Select>
                                     </FormControl>
                                 </div>
@@ -165,14 +165,14 @@ class ProjectInformation extends React.Component {
                                             <MenuItem value="">
                                                 <em>None</em>
                                             </MenuItem>
-                                            <MenuItem value={10}>Carbon</MenuItem>
-                                            <MenuItem value={20}>Energy Efficiency</MenuItem>
-                                            <MenuItem value={30}>Water Quality</MenuItem>
-                                            <MenuItem value={40}>Biodiversity And Habitat</MenuItem>
-                                            <MenuItem value={50}>Water</MenuItem>
-                                            <MenuItem value={60}>Social</MenuItem>
-                                            <MenuItem value={70}>REDD</MenuItem>
-                                            <MenuItem value={70}>Forrest Conservation & Avoided</MenuItem>
+                                            <MenuItem value="Carbon">Carbon</MenuItem>
+                                            <MenuItem value="Energy Efficiency">Energy Efficiency</MenuItem>
+                                            <MenuItem value="Water Quality">Water Quality</MenuItem>
+                                            <MenuItem value="Biodiversity And Habitat">Biodiversity And Habitat</MenuItem>
+                                            <MenuItem value="Water">Water</MenuItem>
+                                            <MenuItem value="Social">Social</MenuItem>
+                                            <MenuItem value="REDD">REDD</MenuItem>
+                                            <MenuItem value="Forrest Conservation & Avoided">Forrest Conservation & Avoided</MenuItem>
                                         </Select>
                                     </FormControl>
                                 </div>

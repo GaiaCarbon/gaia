@@ -28,8 +28,30 @@ class TokenizationFlow extends React.Component {
         super(props);
         this.projectInfo = {};
         this.state = {
-            activeStep: 0
+            activeStep: 0,
+
+            // Project Info
+            projectType:"-",
+            assetName:"-",
+            geoFocus:"-",
+            countryFocus1:"-",
+            aType:"-",
+            projectCategory:"-",
+            aboutProject:"-",
+            projectHighLights:"-",
+
+            // Fundraising Details
+            units:"-",
+            currency:"-",
+            measurement:"-",
+            projectStart: moment(),
+            projectEnd: moment(),
+
+            // Legal Parties
+            standard:"-",
+            verifier:"-"
         };
+
 
         this.handleStateChange = this.handleStateChange.bind(this);
     }
@@ -113,8 +135,23 @@ class TokenizationFlow extends React.Component {
                 <div>
                     {this.state.activeStep === steps.length ? (
                         <div>
+
                             <Confirmation
+                                projectType={this.state.projectType}
                                 assetName={this.state.assetName}
+                                geoFocus={this.state.geoFocus}
+                                countryFocus1={this.state.countryFocus1}
+                                aType={this.state.aType}
+                                projectCategory={this.state.projectCategory}
+                                aboutProject={this.state.aboutProject}
+                                projectHighLights={this.state.projectHighLights}
+                                units={this.state.units}
+                                currency={this.state.currency}
+                                measurement={this.state.measurement}
+                                projectStart={this.state.projectStart}
+                                projectEnd={this.state.projectEnd}
+                                standard={this.state.standard}
+                                verifier={this.state.verifier}
                             />
                             <div>
                                 <Button onClick={this.handleReset}>Reset</Button>

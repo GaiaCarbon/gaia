@@ -56,9 +56,9 @@ class LegalParties extends React.Component {
                                             onChange={this.handleChange}
                                             input={<Input id="standard"/>}
                                         >
-                                            <MenuItem value={10}>Gold Standard</MenuItem>
-                                            <MenuItem value={20}>CarbonFIX</MenuItem>
-                                            <MenuItem value={20}>Verified Carbon Standard</MenuItem>
+                                            <MenuItem value="Gold Standard">Gold Standard</MenuItem>
+                                            <MenuItem value="CarbonFIX">CarbonFIX</MenuItem>
+                                            <MenuItem value="Verified Carbon Standard">Verified Carbon Standard</MenuItem>
 
                                         </Select>
                                     </FormControl>
@@ -75,12 +75,12 @@ class LegalParties extends React.Component {
                                             onChange={this.handleChange}
                                             input={<Input id="verifier"/>}
                                         >
-                                            <MenuItem value={10}>TUV SUD</MenuItem>
-                                            <MenuItem value={20}>DNV Climate Change Services AS</MenuItem>
-                                            <MenuItem value={30}>Det Norske Veritas Certification AS</MenuItem>
-                                            <MenuItem value={40}>Bureau Veritas Certification Holding</MenuItem>
-                                            <MenuItem value={50}>RINA S.p.A</MenuItem>
-                                            <MenuItem value={60}>SCS Global Services</MenuItem>
+                                            <MenuItem value="TUV SUD">TUV SUD</MenuItem>
+                                            <MenuItem value="DNV Climate Change Services AS">DNV Climate Change Services AS</MenuItem>
+                                            <MenuItem value="Det Norske Veritas Certification AS">Det Norske Veritas Certification AS</MenuItem>
+                                            <MenuItem value="Bureau Veritas Certification Holding">Bureau Veritas Certification Holding</MenuItem>
+                                            <MenuItem value="RINA S.p.A">RINA S.p.A</MenuItem>
+                                            <MenuItem value="SCS Global Services">SCS Global Services</MenuItem>
                                         </Select>
                                     </FormControl>
                                 </div>
