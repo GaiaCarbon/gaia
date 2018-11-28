@@ -50,7 +50,7 @@ class App extends React.Component {
 
         return (
             <div className={`app-container ${drawerStyle}`}>
-                <Tour/>
+                {/* <Tour/> */}
 
                 <Sidebar/>
                 <div className="app-main-container">
@@ -109,7 +109,7 @@ class App extends React.Component {
                         <Footer/>
                     </main>
                 </div>
-                <ColorOption/>
+                {/* <ColorOption/> */}
             </div>
         );
     }

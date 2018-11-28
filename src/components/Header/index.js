@@ -140,7 +140,10 @@ class Header extends React.Component {
                                 </DropdownMenu>
                             </Dropdown>
                         </li>
-                        <li className="list-inline-item">
+                        {
+                            /* Language picker */
+                        }
+                        {/* <li className="list-inline-item">
                             <Dropdown
                                 className="quick-menu"
                                 isOpen={this.state.langSwitcher}
@@ -162,8 +165,11 @@ class Header extends React.Component {
                             </Dropdown>
 
 
-                        </li>
-                        <li className="list-inline-item app-tour">
+                        </li> */}
+                        {
+                            /* Notifications */
+                        }
+                        {/* <li className="list-inline-item app-tour">
                             <Dropdown
                                 className="quick-menu"
                                 isOpen={this.state.appNotification}
@@ -184,8 +190,11 @@ class Header extends React.Component {
                                     <AppNotification/>
                                 </DropdownMenu>
                             </Dropdown>
-                        </li>
-                        <li className="list-inline-item mail-tour">
+                        </li> */}
+                        {
+                            /* Messages */
+                        }
+                        {/* <li className="list-inline-item mail-tour">
                             <Dropdown
                                 className="quick-menu"
                                 isOpen={this.state.mailNotification}
@@ -208,7 +217,7 @@ class Header extends React.Component {
                                     <MailNotification/>
                                 </DropdownMenu>
                             </Dropdown>
-                        </li>
+                        </li> */}
 
                         {navigationStyle === HORIZONTAL_NAVIGATION &&
                         <li className="list-inline-item user-nav">
