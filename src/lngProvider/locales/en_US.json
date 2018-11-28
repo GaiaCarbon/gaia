@@ -44,6 +44,7 @@
   "sidebar.tables": "Investments",
   "sidebar.tables.basicTable": "My Assets/Wallet",
   "sidebar.tables.dataTable": "Transactions/Reporting",
+  "sidebar.tables.assets": "Natural Assets Market",
   "sidebar.timeLine": "Time Line",
   "sidebar.timeLine.default": "Default",
   "sidebar.timeLine.defaultwithIcons": "Default with Icons",

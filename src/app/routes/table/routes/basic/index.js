@@ -18,7 +18,7 @@ const BasicTables = () => {
                 </CardBox>
             </div>
 
-            <div className="row mb-md-4">
+            {/* <div className="row mb-md-4">
                 <div className="col-xl-12">
                     <div className="jr-card">
                         <div className="jr-card-header d-flex align-items-center">
@@ -31,9 +31,9 @@ const BasicTables = () => {
                         <MarketingTable data={marketingData}/>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="row mb-md-4">
+            {/* <div className="row mb-md-4">
                 <div className="col-12">
                     <div className="jr-card">
                         <div className="jr-card-header d-flex align-items-center">
@@ -46,7 +46,7 @@ const BasicTables = () => {
                         <OrderTable/>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/*<div className="row mb-md-4">*/}
                 {/*<CardBox styleName="col-lg-12" cardStyle="p-0" heading={<IntlMessages id="table.application"/>}*/}
