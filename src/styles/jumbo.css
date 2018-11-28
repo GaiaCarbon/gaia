@@ -27188,4 +27188,16 @@ body.dark-theme {
   padding-top: 3px;
 }
 
+ul.nav-menu li.menu.disable-caret > a:before {
+  content: none;
+}
+
+.disable-box-shadow .jr-card {
+  box-shadow: none;
+}
+
+.disable-box-shadow .card {
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=jumbo.css.map */
