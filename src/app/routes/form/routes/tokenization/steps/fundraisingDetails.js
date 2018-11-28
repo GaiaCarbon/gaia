@@ -27,28 +27,35 @@ class FundraisingDetails extends React.Component {
             startDate:  moment(),
             endDate: moment()
         };
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange = name => event => {
-        this.setState({[name]: event.target.value});
+    //handleChange = name => event => {
+
+      //  this.setState({[name]: event.target.value});
+    //};
+
+    handleChange(e) {
+
+        if (e.target) {
+            let targetControl = e.target.name;
+            let value = e.target.value;
+            // Send state to upper control
+            this.props.onStateChange(targetControl, value);
+            // maintain state in control (visual issue with the material ui)
+            this.setState({[targetControl]: value});
+        }
     };
 
     handleDateChange = name => date => {
-
-        debugger;
-
-
         this.setState({[name]: date});
-
-        let test = moment();
-
-
+        this.props.onStateChange(name, date);
     };
 
     render(){
         const {startDate} = this.state;
         const {endDate} = this.state;
-
 
         return (
             <div>
@@ -66,9 +73,11 @@ class FundraisingDetails extends React.Component {
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <TextField
+                                        name="units"
                                         id="units"
                                         label="Units"
                                         margin="normal"
+                                        onChange={this.handleChange}
                                         fullWidth
                                     />
                                 </div>
@@ -79,8 +88,9 @@ class FundraisingDetails extends React.Component {
 
                                         <InputLabel htmlFor="currency">{<IntlMessages id="component.tokenization.label.currency"/>}</InputLabel>
                                         <Select
+                                            name="currency"
                                             value={this.state.currency}
-                                            onChange={this.handleChange('currency')}
+                                            onChange={this.handleChange}
                                             input={<Input id="currency"/>}
                                         >
                                             <MenuItem value={10}>EUR</MenuItem>
@@ -97,8 +107,9 @@ class FundraisingDetails extends React.Component {
                                     <FormControl className="w-100"  margin="normal">
                                         <InputLabel htmlFor="measurement">{<IntlMessages id="component.tokenization.label.measurement"/>}</InputLabel>
                                         <Select
+                                            name="measurement"
                                             value={this.state.measurement}
-                                            onChange={this.handleChange('measurement')}
+                                            onChange={this.handleChange}
                                             input={<Input id="measurement"/>}
                                         >
                                             <MenuItem value={10}>VER (tCO2e)</MenuItem>

@@ -34,7 +34,7 @@ class Confirmation extends React.Component {
                             </SvgIcon>
                             <h1>Completed</h1>
                             <p>Your project application has been submitted to the greenX platform.</p>
-                            <p>Out experts will asses and get back to you.</p>
+                            <p>Our experts will asses and get back to you.</p>
                         </div>
                     </div>
                 </div>
@@ -47,9 +47,6 @@ class Confirmation extends React.Component {
                             <div className="col-md-4">Part 2</div>
                             <div className="col-md-4">Part 3</div>
                         </div>
-
-
-
 
                     </div>
 

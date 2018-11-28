@@ -28,8 +28,7 @@ class TokenizationFlow extends React.Component {
         super(props);
         this.projectInfo = {};
         this.state = {
-            activeStep: 0,
-            assetName:""
+            activeStep: 0
         };
 
         this.handleStateChange = this.handleStateChange.bind(this);
@@ -37,8 +36,6 @@ class TokenizationFlow extends React.Component {
 
     handleNext = () => {
 
-        let pStat = this.projectInfo;
-        debugger;
         const {activeStep} = this.state;
         this.setState({
             activeStep: activeStep + 1
@@ -65,7 +62,6 @@ class TokenizationFlow extends React.Component {
         if(name === "projectType"){
 
             let sdfsd = this.state;
-            debugger;
 
         }
 
@@ -85,11 +81,11 @@ class TokenizationFlow extends React.Component {
                                            // assetType={this.state.assetType}
                 />;
             case 1:
-                return <FundraisingDetails />;
+                return <FundraisingDetails onStateChange={this.handleStateChange} />;
             case 2:
                 return <AdditionalDocuments /> ;
             case 3:
-                return <LegalParties />;
+                return <LegalParties onStateChange={this.handleStateChange} />;
             default:
                 return 'Unknown stepIndex';
         }

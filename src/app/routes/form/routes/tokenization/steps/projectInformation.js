@@ -33,9 +33,8 @@ class ProjectInformation extends React.Component {
     };
 
     handleChange(e) {
-        debugger;
-        if (e.target) {
 
+        if (e.target) {
             let targetControl = e.target.name;
             let value = e.target.value;
             // Send state to upper control

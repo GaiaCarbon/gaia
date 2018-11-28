@@ -15,13 +15,26 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 
 class LegalParties extends React.Component {
-    state = {
-        standard: "",
-        verifier: ""
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            standard: "",
+            verifier: ""
+        };
+        this.handleChange = this.handleChange.bind(this);
     };
 
-    handleChange = name => event => {
-        this.setState({[name]: event.target.value});
+
+    handleChange(e) {
+        if (e.target) {
+            let targetControl = e.target.name;
+            let value = e.target.value;
+            // Send state to upper control
+            this.props.onStateChange(targetControl, value);
+            // maintain state in control (visual issue with the material ui)
+            this.setState({[targetControl]: value});
+        }
     };
 
     render() {
@@ -38,8 +51,9 @@ class LegalParties extends React.Component {
                                     <FormControl className="w-100"  margin="normal">
                                         <InputLabel htmlFor="standard">{<IntlMessages id="component.tokenization.label.standard"/>}</InputLabel>
                                         <Select
+                                            name="standard"
                                             value={this.state.standard}
-                                            onChange={this.handleChange('standard')}
+                                            onChange={this.handleChange}
                                             input={<Input id="standard"/>}
                                         >
                                             <MenuItem value={10}>Gold Standard</MenuItem>
@@ -56,8 +70,9 @@ class LegalParties extends React.Component {
 
                                         <InputLabel htmlFor="verifier">{<IntlMessages id="component.tokenization.label.verifier"/>}</InputLabel>
                                         <Select
+                                            name="verifier"
                                             value={this.state.verifier}
-                                            onChange={this.handleChange('verifier')}
+                                            onChange={this.handleChange}
                                             input={<Input id="verifier"/>}
                                         >
                                             <MenuItem value={10}>TUV SUD</MenuItem>

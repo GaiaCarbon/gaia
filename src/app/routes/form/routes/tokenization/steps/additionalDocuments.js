@@ -30,6 +30,7 @@ class AdditionalDocuments extends React.Component {
                                 accept=".jpeg,.png"
                                 className="dropDefault"
                                 onDrop={(accepted, rejected) => {
+                                    debugger;
                                     this.setState({accepted, rejected});
                                 }}
                             >
