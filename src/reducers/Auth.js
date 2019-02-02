@@ -48,7 +48,7 @@ export default (state = INIT_STATE, action) => {
             return {
                 ...state,
                 authUser: null,
-                initURL: '/app/dashboard/default',
+                initURL: '/app/table/basic',
                 loader: false
             }
         }
@@ -70,34 +70,7 @@ export default (state = INIT_STATE, action) => {
             }
         }
 
-        case SIGNIN_GOOGLE_USER_SUCCESS: {
-            return {
-                ...state,
-                loader: false,
-                authUser: action.payload
-            }
-        }
-        case SIGNIN_FACEBOOK_USER_SUCCESS: {
-            return {
-                ...state,
-                loader: false,
-                authUser: action.payload
-            }
-        }
-        case SIGNIN_TWITTER_USER_SUCCESS: {
-            return {
-                ...state,
-                loader: false,
-                authUser: action.payload
-            }
-        }
-        case SIGNIN_GITHUB_USER_SUCCESS: {
-            return {
-                ...state,
-                loader: false,
-                authUser: action.payload
-            }
-        }
+
         case ON_SHOW_LOADER: {
             return {
                 ...state,

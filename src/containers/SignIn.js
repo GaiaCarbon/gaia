@@ -26,6 +26,7 @@ class SignIn extends React.Component {
     }
 
     componentDidUpdate() {
+        debugger;
         if (this.props.showMessage) {
             setTimeout(() => {
                 this.props.hideMessage();
@@ -92,52 +93,52 @@ class SignIn extends React.Component {
                                         </Link>
                                     </div>
 
-                                    <div className="app-social-block my-1 my-sm-3">
-                                        <IntlMessages
-                                            id="signIn.connectWith"/>
-                                        <ul className="social-link">
-                                            <li>
-                                                <IconButton className="icon"
-                                                            onClick={() => {
-                                                                this.props.showAuthLoader();
-                                                                this.props.userFacebookSignIn();
-                                                            }}>
-                                                    <i className="zmdi zmdi-facebook"/>
-                                                </IconButton>
-                                            </li>
+                                    {/*<div className="app-social-block my-1 my-sm-3">*/}
+                                        {/*<IntlMessages*/}
+                                            {/*id="signIn.connectWith"/>*/}
+                                        {/*<ul className="social-link">*/}
+                                            {/*<li>*/}
+                                                {/*<IconButton className="icon"*/}
+                                                            {/*onClick={() => {*/}
+                                                                {/*this.props.showAuthLoader();*/}
+                                                                {/*this.props.userFacebookSignIn();*/}
+                                                            {/*}}>*/}
+                                                    {/*<i className="zmdi zmdi-facebook"/>*/}
+                                                {/*</IconButton>*/}
+                                            {/*</li>*/}
 
-                                            <li>
-                                                <IconButton className="icon"
-                                                            onClick={() => {
-                                                                this.props.showAuthLoader();
-                                                                this.props.userTwitterSignIn();
-                                                            }}>
-                                                    <i className="zmdi zmdi-twitter"/>
-                                                </IconButton>
-                                            </li>
+                                            {/*<li>*/}
+                                                {/*<IconButton className="icon"*/}
+                                                            {/*onClick={() => {*/}
+                                                                {/*this.props.showAuthLoader();*/}
+                                                                {/*this.props.userTwitterSignIn();*/}
+                                                            {/*}}>*/}
+                                                    {/*<i className="zmdi zmdi-twitter"/>*/}
+                                                {/*</IconButton>*/}
+                                            {/*</li>*/}
 
-                                            <li>
-                                                <IconButton className="icon"
-                                                            onClick={() => {
-                                                                this.props.showAuthLoader();
-                                                                this.props.userGoogleSignIn();
+                                            {/*<li>*/}
+                                                {/*<IconButton className="icon"*/}
+                                                            {/*onClick={() => {*/}
+                                                                {/*this.props.showAuthLoader();*/}
+                                                                {/*this.props.userGoogleSignIn();*/}
 
-                                                            }}>
-                                                    <i className="zmdi zmdi-google-plus"/>
-                                                </IconButton>
-                                            </li>
+                                                            {/*}}>*/}
+                                                    {/*<i className="zmdi zmdi-google-plus"/>*/}
+                                                {/*</IconButton>*/}
+                                            {/*</li>*/}
 
-                                            <li>
-                                                <IconButton className="icon"
-                                                            onClick={() => {
-                                                                this.props.showAuthLoader();
-                                                                this.props.userGithubSignIn();
-                                                            }}>
-                                                    <i className="zmdi zmdi-github"/>
-                                                </IconButton>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                            {/*<li>*/}
+                                                {/*<IconButton className="icon"*/}
+                                                            {/*onClick={() => {*/}
+                                                                {/*this.props.showAuthLoader();*/}
+                                                                {/*this.props.userGithubSignIn();*/}
+                                                            {/*}}>*/}
+                                                    {/*<i className="zmdi zmdi-github"/>*/}
+                                                {/*</IconButton>*/}
+                                            {/*</li>*/}
+                                        {/*</ul>*/}
+                                    {/*</div>*/}
 
                                 </fieldset>
                             </form>

@@ -105,7 +105,7 @@ class SidenavContent extends Component {
                     </li>
 
                     <li className="menu disable-caret">
-                        <NavLink className="prepend-icon" to="/app/form/tokenization">
+                        <NavLink className="prepend-icon" to="/app/tokenization">
                             <span className="nav-text"><IntlMessages id="sidebar.forms.tokenization"/></span>
                         </NavLink>
                     </li>

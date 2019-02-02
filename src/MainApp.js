@@ -3,8 +3,8 @@ import {ConnectedRouter} from "react-router-redux";
 import {Provider} from "react-redux";
 import {Route, Switch} from "react-router-dom";
 import configureStore, {history} from "./store";
-import "./helper/firebase";
-import App from "./containers/App";
+// import "./helper/firebase";
+import App from "./gaia/App";
 
 export const store = configureStore();
 
@@ -16,6 +16,5 @@ const MainApp = () =>
             </Switch>
         </ConnectedRouter>
     </Provider>;
-
 
 export default MainApp;

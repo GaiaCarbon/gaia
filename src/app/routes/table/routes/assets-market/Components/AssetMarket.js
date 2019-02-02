@@ -2,13 +2,8 @@ import React from 'react';
 import {Card, CardBody, CardImg} from 'reactstrap';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import connect from "react-redux/es/connect/connect";
 
-let counter = 0;
-
-function createData(name, price, remaining, metric, currency, currencySign) {
-    counter += 1;
-    return {id: counter, name, price, remaining, metric, currency, currencySign};
-}
 
 const styles = {
     button: {
@@ -24,46 +19,51 @@ class AssetMarket extends React.Component {
     constructor(props, context) {
         super(props, context);
 
+        // debugger;
+
         this.state = {
-            styles: styles,
-            data: [
-              createData('Tree token', 159, 24, 'ton', 'USD', '$'),
-              createData('Flower token', 234, 24, 'ton', 'USD', '$'),
-              createData('Plant token', 159, 24, 'ton', 'USD', '$'),
-              createData('Air token', 23, 24, 'ton', 'USD', '$'),
-              createData('Fire token', 234, 24, 'ton', 'USD', '$'),
-              createData('Flower token', 234, 24, 'ton', 'USD', '$'),
-              createData('Sunflower token', 567, 24, 'ton', 'USD', '$'),
-              createData('Plant token', 159, 24, 'ton', 'USD', '$'),
-              createData('Air token', 23, 24, 'ton', 'USD', '$'),
-              createData('Fire token', 234, 24, 'ton', 'USD', '$'),
-              createData('Flower token', 234, 24, 'ton', 'USD', '$'),
-              createData('Tree token', 159, 24, 'ton', 'USD', '$'),
-              createData('Tree token', 567, 24, 'ton', 'USD', '$'),
-              createData('Tree token', 159, 24, 'ton', 'USD', '$'),
-            ]
+            styles: styles
         };
+
+        this.getImageSrc = this.getImageSrc.bind(this);
+    }
+
+    getImageSrc(token){
+
+        const url = "http://via.placeholder.com/420x225";
+
+        if(token.projectImage){
+            return token.projectImage;
+        }
+
+        return url;
     }
 
     render() {
-        const {data, styles} = this.state;
+
+        const {styles} = this.state;
+
+        const { tokens } = this.props;
+
+
+
 
         return (
             <Grid container style={styles.container} spacing={24}>
                 {
-                    data.map((data) =>
-                        <Grid item xs={12} sm={6} lg={3}>
-                            <Card className="shadow border-0">
-                                <CardImg top width="100%" src="http://via.placeholder.com/420x225" />
+                    tokens.map((data, index) =>
+                        <Grid key={index}  item xs={12} sm={6} lg={3}>
+                            <Card key={index} className="shadow border-0">
+                                <CardImg top width="100%" src={this.getImageSrc(data.projectInfo)}/>
                                 <CardBody>
                                     <h3 className="card-title mb-0">
-                                        {data.name}
+                                        {data.projectInfo.assetName}
                                     </h3>
                                     <h4 className="font-weight-light">
-                                        {data.currencySign}{data.price} {data.currency}/{data.metric} | {data.remaining} remaining
+                                       {data.stock.price} {data.fundraisingDetails.currency}/{data.stock.metric} | {data.stock.remaining} remaining
                                     </h4>
                                     <p className="card-text text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                        {data.projectInfo.aboutProject}
                                     </p>
                                 </CardBody>
 
@@ -81,4 +81,14 @@ class AssetMarket extends React.Component {
     }
 }
 
-export default AssetMarket;
+
+const mapStateToProps = (state, props) =>{
+
+    const { assetMarket } = state;
+
+    return assetMarket;
+};
+
+
+
+export default connect(mapStateToProps,{})(AssetMarket);

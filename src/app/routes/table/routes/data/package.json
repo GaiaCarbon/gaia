@@ -2,5 +2,5 @@
   "name": "DataTable",
   "version": "0.0.0",
   "private": true,
-  "main": "./Components/DataTable.js"
+  "main": "Components/DataTable.js"
 }

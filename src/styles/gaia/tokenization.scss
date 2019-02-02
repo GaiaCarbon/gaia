@@ -1,0 +1,25 @@
+
+
+.drop-default {
+  border: 2px dashed  black;
+  height: 200px;
+  width: 350px;
+
+}
+
+.drop-documents {
+  border: 2px dashed  black;
+  height: 250px;
+  width: 100%;
+}
+
+.drop-file {
+  height: 60px;
+  width: 100px;
+  border: 2px black solid;
+  margin: 4px;
+  padding: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

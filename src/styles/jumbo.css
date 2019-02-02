@@ -25463,6 +25463,28 @@ body.dark-theme {
   border-color: #495762;
 }
 
+.drop-default {
+  border: 2px dashed black;
+  height: 200px;
+  width: 350px;
+}
+
+.drop-documents {
+  border: 2px dashed black;
+  height: 250px;
+  width: 100%;
+}
+
+.drop-file {
+  height: 60px;
+  width: 100px;
+  border: 2px black solid;
+  margin: 4px;
+  padding: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /*Bootstrap Styles*/
 .rtl .list-unstyled,
 .rtl .list-inline,
@@ -27167,37 +27189,6 @@ body.dark-theme {
 
 .rtl .owl-carousel {
   direction: ltr;
-}
-
-.dropDefault {
-  width: 100%;
-  height: 120px;
-  border: 2px dashed darkgray;
-  padding: 4px;
-  vertical-align: middle;
-  text-align: center;
-  display: table;
-}
-
-.completeIcon {
-  width: 200px;
-  height: 200px;
-}
-
-.nudge {
-  padding-top: 3px;
-}
-
-ul.nav-menu li.menu.disable-caret > a:before {
-  content: none;
-}
-
-.disable-box-shadow .jr-card {
-  box-shadow: none;
-}
-
-.disable-box-shadow .card {
-  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=jumbo.css.map */
