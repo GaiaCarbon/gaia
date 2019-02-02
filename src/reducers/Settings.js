@@ -20,7 +20,7 @@ const initialSettings = {
     drawerType: FIXED_DRAWER,
     themeColor: DARK_INDIGO,
     darkTheme: false,
-    runningLocally: (window.location.port == "3000"), // 3000 is assumed to be the create react app server
+    runningLocally: (window.location.port == "3000" || window.location.host.includes("netlify.com")), // 3000 is assumed to be the create react app server
     width: window.innerWidth,
     isDirectionRTL: false,
     navigationStyle: VERTICAL_NAVIGATION,
